@@ -9,15 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>Recruitment Exercise - adRespect</title>
     <link rel="stylesheet" href="../index.css" />
     <link href="../../dist/output.css" rel="stylesheet" />
     <script src="../scripts/navbar.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
       <nav
-        class="max-w-project project:px-[178px] mx-auto flex w-full flex-col items-center gap-4 p-4 lg:flex-row lg:justify-between lg:gap-0 lg:p-6"
+        class="max-w-project project:px-[89px] mx-auto flex w-full flex-col items-center gap-4 p-4 lg:flex-row lg:justify-between lg:gap-0 lg:p-6"
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
           <img src="../../public/client-logo.svg" alt="Client Logo" />
@@ -47,7 +54,10 @@
               <span class="flex"
                 >Oferta <img class="px-2" src="../assets/icons/arrow-icon.svg"
               /></span>
-              <div id="dropdown" class="dropdown">
+              <div
+                id="dropdown"
+                class="dropdown z-10 lg:rounded-lg lg:bg-white"
+              >
                 <a href="#projects">Projekty</a>
                 <a href="#visualizations">Vizualizacje</a>
                 <a href="#realizations">Realizacje</a>
@@ -75,9 +85,149 @@
         </div>
       </nav>
     </header>
-    <main>Hello world!</main>
+    <main>
+      <div class="bg-beige slider w-full">
+        <div
+          class="mySwiper max-w-project relative mx-auto w-full overflow-hidden"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
+              <div
+                class="slider project:pl-[89px] absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-6"
+              >
+                <p
+                  class="font-inter w-1/2 text-center text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
+                >
+                  Nowoczesna aranżacja Twojego ogrodu
+                </p>
+                <p
+                  class="font-inter w-1/2 text-center text-sm lg:w-full lg:text-start lg:text-base"
+                  >Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usługz
+                  indywidualnym podejściem do każdego projektu.</p
+                >
+                <div class="flex flex-col gap-9 lg:flex-row">
+                  <button class="bg-green rounded-[80px] px-6 py-3 text-white"
+                    >Skontaktuj się z nami</button
+                  >
+                  <button
+                    class="border-green text-green flex items-center justify-center gap-2 rounded-[80px] border px-6 py-3"
+                    >Zobacz nasze realizacje
+                    <img
+                      src="../assets/icons/arrow-down-icon.svg"
+                      width="16px"
+                      height="16px"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="h-screen w-full">
+                <img
+                  class="swiper-slide-img blur-[10px] lg:blur-0"
+                  src="../assets/images/photo-1.webp"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
+              <div
+                class="slider project:pl-[89px] absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:pl-6"
+              >
+                <p
+                  class="font-inter w-1/2 text-center text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
+                >
+                  Nowoczesna aranżacja Twojego ogrodu
+                </p>
+                <p
+                  class="font-inter w-1/2 text-center text-sm lg:w-full lg:text-start lg:text-base"
+                  >Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usługz
+                  indywidualnym podejściem do każdego projektu.</p
+                >
+                <div class="flex flex-col gap-9 lg:flex-row">
+                  <button class="bg-green rounded-[80px] px-6 py-3 text-white"
+                    >Skontaktuj się z nami</button
+                  >
+                  <button
+                    class="border-green text-green flex items-center justify-center gap-2 rounded-[80px] border px-6 py-3"
+                    >Zobacz nasze realizacje
+                    <img
+                      src="../assets/icons/arrow-down-icon.svg"
+                      width="16px"
+                      height="16px"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="h-screen w-full">
+                <img
+                  class="swiper-slide-img blur-[10px] lg:blur-0"
+                  src="../assets/images/photo-1.webp"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
+              <div
+                class="slider project:pl-[89px] absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:pl-6"
+              >
+                <p
+                  class="font-inter w-1/2 text-center text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
+                >
+                  Nowoczesna aranżacja Twojego ogrodu
+                </p>
+                <p
+                  class="font-inter w-1/2 text-center text-sm lg:w-full lg:text-start lg:text-base"
+                  >Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usługz
+                  indywidualnym podejściem do każdego projektu.</p
+                >
+                <div class="flex flex-col gap-9 lg:flex-row">
+                  <button class="bg-green rounded-[80px] px-6 py-3 text-white"
+                    >Skontaktuj się z nami</button
+                  >
+                  <button
+                    class="border-green text-green flex items-center justify-center gap-2 rounded-[80px] border px-6 py-3"
+                    >Zobacz nasze realizacje
+                    <img
+                      src="../assets/icons/arrow-down-icon.svg"
+                      width="16px"
+                      height="16px"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="h-screen w-full">
+                <img
+                  class="swiper-slide-img blur-[10px] lg:blur-0"
+                  src="../assets/images/photo-2.webp"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-1/2 right-0 z-10 flex w-full items-center justify-between lg:bottom-0 lg:w-48 lg:bg-white"
+          >
+            <div
+              class="slider-prev flex items-center justify-center bg-white lg:h-24 lg:w-24"
+              ><img src="../assets/icons/slider-left-icon.svg"
+            /></div>
+            <div
+              class="slider-next flex items-center justify-center bg-white lg:h-24 lg:w-24"
+              ><img src="../assets/icons/slider-right-icon.svg"
+            /></div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       <p>footer</p>
     </footer>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        navigation: {
+          nextEl: '.slider-next',
+          prevEl: '.slider-prev'
+        }
+      })
+    </script>
   </body>
 </html>
