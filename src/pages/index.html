@@ -3,13 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recuriment Exercise - adRespect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Recruitment Exercise - adRespect</title>
     <link rel="stylesheet" href="../index.css" />
     <link href="../../dist/output.css" rel="stylesheet" />
+    <script src="../scripts/navbar.js" defer></script>
   </head>
   <body>
     <header>
-      <p>header</p>
+      <nav
+        class="max-w-project project:px-[178px] mx-auto flex w-full flex-col items-center gap-4 p-4 lg:flex-row lg:justify-between lg:gap-0 lg:p-6"
+      >
+        <div class="flex w-full items-center justify-between lg:w-fit">
+          <img src="../../public/client-logo.svg" alt="Client Logo" />
+          <div class="cursor-pointer lg:sr-only" onclick="openMenu()">X</div>
+        </div>
+        <div class="flex w-fit gap-4 lg:hidden">
+          <img
+            id="searchbar"
+            class="cursor-pointer lg:hidden"
+            src="../assets/icons/search-icon.svg"
+            alt="Search Icon"
+          />
+          <input
+            type="text"
+            class="border-gray border"
+            placeholder="Wyszukaj "
+          />
+        </div>
+        <div
+          class="font-inter flex items-center justify-center text-sm lg:items-start lg:justify-start"
+        >
+          <div class="topnav lg:flex lg:w-full lg:gap-12" id="navigation-bar">
+            <div
+              onclick="openDropdown()"
+              class="relative flex cursor-pointer flex-col"
+            >
+              <span class="flex"
+                >Oferta <img class="px-2" src="../assets/icons/arrow-icon.svg"
+              /></span>
+              <div id="dropdown" class="dropdown">
+                <a href="#projects">Projekty</a>
+                <a href="#visualizations">Vizualizacje</a>
+                <a href="#realizations">Realizacje</a>
+              </div>
+            </div>
+            <a href="#about">O firmie</a>
+            <a href="#realizations">Realizacje</a>
+            <a href="#contact">Kontakt</a>
+            <div class="hidden w-fit gap-4 lg:flex">
+              <img
+                id="searchbar"
+                class="hidden cursor-pointer lg:block"
+                src="../assets/icons/search-icon.svg"
+                alt="Search Icon"
+                onclick="showSearchbar()"
+              />
+              <input
+                type="text"
+                id="searchInput"
+                class="border-gray hidden border"
+                placeholder="Wyszukaj "
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>Hello world!</main>
     <footer>
