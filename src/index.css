@@ -44,17 +44,18 @@
 .swiper-slide {
   display: grid !important;
   height: calc(100dvh - 114px) !important;
+}
 
-  @media (min-width: 1024px) {
-    .slider {
-      height: calc(100dvh - 72px);
-    }
-    .swiper-slide {
-      display: grid !important;
-      height: calc(100dvh - 72px) !important;
-    }
+@media (min-width: 1024px) {
+  .slider {
+    height: calc(100dvh - 72px);
+  }
+  .swiper-slide {
+    display: grid !important;
+    height: calc(100dvh - 72px) !important;
   }
 }
+
 .swiper-slide-img {
   display: block;
   width: 100%;
