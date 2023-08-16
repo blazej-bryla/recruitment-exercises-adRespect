@@ -32,8 +32,35 @@
   display: flex;
   gap: 5px;
   font-size: 14px;
-  padding-left: 2rem;
   flex-direction: column;
+  padding: 1rem;
   position: absolute;
   top: 2rem;
+}
+
+.slider {
+  height: calc(100dvh - 114px);
+}
+.swiper-slide {
+  display: grid !important;
+  height: calc(100dvh - 114px) !important;
+
+  @media (min-width: 1024px) {
+    .slider {
+      height: calc(100dvh - 72px);
+    }
+    .swiper-slide {
+      display: grid !important;
+      height: calc(100dvh - 72px) !important;
+    }
+  }
+}
+.swiper-slide-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next {
+  background-color: black;
 }
