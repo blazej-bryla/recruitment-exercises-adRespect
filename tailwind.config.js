@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
+      screens: {
+        project: '1440px'
+      },
       maxWidth: {
         project: 1440
       },
@@ -14,6 +17,9 @@ module.exports = {
       },
       textColor: {
         white: '#F5F0EC'
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif']
       }
     }
   },
