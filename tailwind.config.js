@@ -19,7 +19,8 @@ module.exports = {
         white: '#F5F0EC'
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif']
+        inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif']
       }
     }
   },
