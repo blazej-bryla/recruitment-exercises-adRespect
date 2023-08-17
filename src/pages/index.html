@@ -492,8 +492,54 @@
         </div>
       </div>
     </main>
-    <footer>
-      <p>footer</p>
+    <footer class="w-full bg-black">
+      <div class="mx-auto max-w-project px-4 project:px-0">
+        <div class="mx-auto max-w-[1040px]">
+          <div
+            class="flex flex-col items-center justify-between pt-20 text-white lg:flex-row"
+          >
+            <img src="../../public/client-logo-white.svg" alt="logo klienta" />
+            <div
+              class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
+            >
+              <p class="font-inter">Daj znać, co możemy dla Ciebie zrobić!</p>
+              <a href="#" class="rounded-[35px] bg-green px-6 py-3"
+                >Skontakuj się z nami</a
+              >
+            </div>
+          </div>
+          <div class="w-full py-[60px]">
+            <hr class="text-white" />
+          </div>
+          <div
+            class="flex flex-col items-center justify-between font-inter text-sm text-white lg:flex-row"
+          >
+            <div
+              class="flex flex-col gap-8 text-center lg:flex-row lg:gap-12 lg:text-start"
+            >
+              <a href="#">Kontakt</a>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">LinkedIn</a>
+            </div>
+            <div
+              class="flex flex-col gap-4 pt-8 text-center font-inter text-white lg:flex-row lg:gap-12 lg:pt-0 lg:text-start"
+            >
+              <a href="tel:+000-000-000">000-000-000</a>
+              <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-between gap-8 pb-[80px] pt-8 text-center font-inter text-white lg:flex-row lg:gap-0 lg:pt-[120px] lg:text-start"
+          >
+            <p>Prawa zastrzeżone © 2022</p>
+            <div class="flex items-center gap-4">
+              <p>made by</p>
+              <img src="../../public/logo.svg" alt="logo adRespect" />
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script>
       const swiper = new Swiper('.mySwiper', {
@@ -514,7 +560,7 @@
         columns: 3,
         breakAt: {
           1200: 3,
-          940: 2,
+          1024: 2,
           520: 1
         }
       })
