@@ -5,30 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
 
     <title>Recruitment Exercise - adRespect</title>
-    <link rel="stylesheet" href="../index.css" />
-    <link href="../../dist/output.css" rel="stylesheet" />
-    <script src="../scripts/navbar.js" defer></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/navbar.js" defer></script>
   </head>
   <body>
     <header>
@@ -37,14 +21,14 @@
         class="mx-auto flex w-full max-w-project flex-col items-center gap-4 p-4 lg:flex-row lg:justify-between lg:gap-0 lg:p-6 project:px-[89px]"
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
-          <img src="../../public/client-logo.svg" alt="Client Logo" />
+          <img src="client-logo.svg" alt="Client Logo" />
           <div class="cursor-pointer lg:sr-only" onclick="openMenu()">X</div>
         </div>
         <div class="flex w-fit gap-4 lg:hidden">
           <img
             id="searchbar"
             class="cursor-pointer lg:hidden"
-            src="../assets/icons/search-icon.svg"
+            src="icons/search-icon.svg"
             alt="Search Icon"
           />
           <input
@@ -62,7 +46,7 @@
               class="relative flex cursor-pointer flex-col"
             >
               <span class="flex"
-                >Oferta <img class="px-2" src="../assets/icons/arrow-icon.svg"
+                >Oferta <img class="px-2" src="icons/arrow-icon.svg"
               /></span>
               <div
                 id="dropdown"
@@ -80,7 +64,7 @@
               <img
                 id="searchbar"
                 class="hidden cursor-pointer lg:block"
-                src="../assets/icons/search-icon.svg"
+                src="icons/search-icon.svg"
                 alt="Search Icon"
                 onclick="showSearchbar()"
               />
@@ -125,7 +109,7 @@
                     class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
                     >Zobacz nasze realizacje
                     <img
-                      src="../assets/icons/arrow-down-icon.svg"
+                      src="icons/arrow-down-icon.svg"
                       width="16px"
                       height="16px"
                     />
@@ -135,7 +119,7 @@
               <div class="h-screen w-full">
                 <img
                   class="swiper-slide-img blur-[10px] lg:blur-0"
-                  src="../assets/images/photo-1.webp"
+                  src="images/photo-1.webp"
                 />
               </div>
             </div>
@@ -162,7 +146,7 @@
                     class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
                     >Zobacz nasze realizacje
                     <img
-                      src="../assets/icons/arrow-down-icon.svg"
+                      src="icons/arrow-down-icon.svg"
                       width="16px"
                       height="16px"
                     />
@@ -172,7 +156,7 @@
               <div class="h-screen w-full">
                 <img
                   class="swiper-slide-img blur-[10px] lg:blur-0"
-                  src="../assets/images/photo-1.webp"
+                  src="images/photo-1.webp"
                 />
               </div>
             </div>
@@ -199,7 +183,7 @@
                     class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
                     >Zobacz nasze realizacje
                     <img
-                      src="../assets/icons/arrow-down-icon.svg"
+                      src="icons/arrow-down-icon.svg"
                       width="16px"
                       height="16px"
                     />
@@ -209,7 +193,7 @@
               <div class="h-screen w-full">
                 <img
                   class="swiper-slide-img blur-[10px] lg:blur-0"
-                  src="../assets/images/photo-2.webp"
+                  src="images/photo-2.webp"
                 />
               </div>
             </div>
@@ -219,11 +203,11 @@
           >
             <div
               class="slider-prev flex items-center justify-center bg-white lg:h-24 lg:w-24"
-              ><img src="../assets/icons/slider-left-icon.svg"
+              ><img src="icons/slider-left-icon.svg"
             /></div>
             <div
               class="slider-next flex items-center justify-center bg-white lg:h-24 lg:w-24"
-              ><img src="../assets/icons/slider-right-icon.svg"
+              ><img src="icons/slider-right-icon.svg"
             /></div>
           </div>
         </div>
@@ -233,7 +217,7 @@
         <div class="px-4 project:px-0">
           <div class="mx-auto max-w-[1040px]">
             <p class="font-inter text-xs text-green">Oferta</p>
-            <p class="font-montserrat pt-4 text-3xl font-medium lg:text-5xl"
+            <p class="pt-4 font-montserrat text-3xl font-medium lg:text-5xl"
               >Działamy <span class="italic">kompleksowo</span></p
             >
             <p class="pt-8 font-inter lg:w-3/4"
@@ -252,11 +236,11 @@
             >
               <div>
                 <img
-                  src="../assets/icons/pencil-icons.svg"
+                  src="icons/pencil-icons.svg"
                   alt="Pencil icon"
                   width="44"
                 />
-                <p class="font-montserrat pt-8 text-[28px] font-medium"
+                <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Projekty</p
                 >
                 <p class="pt-3 font-inter text-sm"
@@ -268,7 +252,7 @@
                 href="#projects"
                 class="flex gap-4 font-inter text-green underline underline-offset-8"
                 >Dowiedz się więcej
-                <img src="../assets/icons/offer-left-icon.svg" width="16"
+                <img src="icons/offer-left-icon.svg" width="16"
               /></a>
             </div>
 
@@ -276,12 +260,8 @@
               class="flex min-h-[370px] flex-col justify-between rounded-[20px] bg-white p-10 xl:p-12"
             >
               <div>
-                <img
-                  src="../assets/icons/eye-icon.svg"
-                  alt="Pencil icon"
-                  width="44"
-                />
-                <p class="font-montserrat pt-8 text-[28px] font-medium"
+                <img src="icons/eye-icon.svg" alt="Pencil icon" width="44" />
+                <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Wizualizacje</p
                 >
                 <p class="pt-3 font-inter text-sm"
@@ -293,7 +273,7 @@
                 href="#visualizations"
                 class="flex gap-4 font-inter text-green underline underline-offset-8"
                 >Dowiedz się więcej
-                <img src="../assets/icons/offer-left-icon.svg" width="16"
+                <img src="icons/offer-left-icon.svg" width="16"
               /></a>
             </div>
 
@@ -301,12 +281,8 @@
               class="flex min-h-[370px] flex-col justify-between rounded-[20px] bg-white p-10 xl:p-12"
             >
               <div>
-                <img
-                  src="../assets/icons/stars-icon.svg"
-                  alt="Pencil icon"
-                  width="44"
-                />
-                <p class="font-montserrat pt-8 text-[28px] font-medium"
+                <img src="icons/stars-icon.svg" alt="Pencil icon" width="44" />
+                <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Realizacje</p
                 >
                 <p class="pt-3 font-inter text-sm"
@@ -318,7 +294,7 @@
                 href="#realizations"
                 class="flex gap-4 font-inter text-green underline underline-offset-8"
                 >Zobacz nasze realizacje
-                <img src="../assets/icons/offer-left-icon.svg" width="16"
+                <img src="icons/offer-left-icon.svg" width="16"
               /></a>
             </div>
           </div>
@@ -328,7 +304,7 @@
       <div class="mx-auto w-full max-w-project pt-12">
         <div class="relative grid grid-cols-1 md:grid-cols-2">
           <img
-            src="../assets/images/photo-2.webp"
+            src="images/photo-2.webp"
             class="absolute top-0 h-full w-full object-cover blur-md md:static md:blur-0"
           />
           <div
@@ -337,7 +313,7 @@
             <div class="max-w-[600px] md:pl-8 lg:pl-16 project:pl-[200px]">
               <p class="font-inter text-xs">O firmie</p>
               <p
-                class="font-montserrat max-w-[250px] pt-4 text-3xl font-medium"
+                class="max-w-[250px] pt-4 font-montserrat text-3xl font-medium"
               >
                 Tworzymy z <span class="italic">pasją</span></p
               >
@@ -353,7 +329,7 @@
                 href="#"
                 class="mt-16 flex w-fit gap-4 rounded-[35px] border border-white px-6 py-4 font-inter"
                 >Poznaj nas bliżej
-                <img src="../assets/icons/arrow-right-about.svg" width="16"
+                <img src="icons/arrow-right-about.svg" width="16"
               /></a>
             </div>
           </div>
@@ -367,83 +343,65 @@
           <div class="px-4 project:pl-[160px]">
             <p class="font-inter text-xs text-green">Realizacje</p>
             <p
-              class="font-montserrat pb-12 pt-4 text-3xl font-medium lg:text-5xl"
+              class="pb-12 pt-4 font-montserrat text-3xl font-medium lg:text-5xl"
               >Nasze <span class="italic">projekty</span></p
             >
           </div>
 
           <div class="macy">
             <a
-              href="../assets/images/realizations/realization-1.webp"
+              href="images/realizations/realization-1.webp"
               data-caption="Podpis do zdjęcia 1"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-1.webp"
-                alt="Image 1"
+              ><img src="images/realizations/realization-1.webp" alt="Image 1"
             /></a>
             <a
-              href="../assets/images/realizations/realization-2.webp"
+              href="images/realizations/realization-2.webp"
               data-caption="Podpis do zdjęcia 2"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-2.webp"
-                alt="Image 2"
+              ><img src="images/realizations/realization-2.webp" alt="Image 2"
             /></a>
             <a
-              href="../assets/images/realizations/realization-3.webp"
+              href="images/realizations/realization-3.webp"
               data-caption="Podpis do zdjęcia 3"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-3.webp"
-                alt="Image 3"
+              ><img src="images/realizations/realization-3.webp" alt="Image 3"
             /></a>
             <a
-              href="../assets/images/realizations/realization-4.webp"
+              href="images/realizations/realization-4.webp"
               data-caption="Podpis do zdjęcia 4"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-4.webp"
-                alt="Image 4"
+              ><img src="images/realizations/realization-4.webp" alt="Image 4"
             /></a>
             <a
-              href="../assets/images/realizations/realization-5.webp"
+              href="images/realizations/realization-5.webp"
               data-caption="Podpis do zdjęcia 5"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-5.webp"
-                alt="Image 5"
+              ><img src="images/realizations/realization-5.webp" alt="Image 5"
             /></a>
             <a
-              href="../assets/images/realizations/realization-6.webp"
+              href="images/realizations/realization-6.webp"
               data-caption="Podpis do zdjęcia 6"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-6.webp"
-                alt="Image 6"
+              ><img src="images/realizations/realization-6.webp" alt="Image 6"
             /></a>
             <a
-              href="../assets/images/realizations/realization-7.webp"
+              href="images/realizations/realization-7.webp"
               data-caption="Podpis do zdjęcia 7"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-7.webp"
-                alt="Image 7"
+              ><img src="images/realizations/realization-7.webp" alt="Image 7"
             /></a>
             <a
-              href="../assets/images/realizations/realization-8.webp"
+              href="images/realizations/realization-8.webp"
               data-caption="Podpis do zdjęcia 8"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-8.webp"
-                alt="Image 8"
+              ><img src="images/realizations/realization-8.webp" alt="Image 8"
             /></a>
             <a
-              href="../assets/images/realizations/realization-9.webp"
+              href="images/realizations/realization-9.webp"
               data-caption="Podpis do zdjęcia 9"
               class="macy-item"
-              ><img
-                src="../assets/images/realizations/realization-9.webp"
-                alt="Image 9"
+              ><img src="images/realizations/realization-9.webp" alt="Image 9"
             /></a>
           </div>
           <div
@@ -452,7 +410,7 @@
             <button
               id="expand-button"
               class="z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black"
-              >Rozwiń <img src="../assets/icons/expand-icon.svg" width="16"
+              >Rozwiń <img src="icons/expand-icon.svg" width="16"
             /></button>
           </div>
           <div
@@ -468,7 +426,7 @@
         class="mx-auto flex w-full max-w-project items-center justify-center py-[60px]"
       >
         <div
-          class="font-montserrat flex w-full max-w-[1040px] flex-col items-center bg-green px-4 py-6 text-center text-2xl text-white lg:min-h-[400px] lg:flex-row lg:justify-center lg:gap-16 lg:text-start lg:text-[40px]"
+          class="flex w-full max-w-[1040px] flex-col items-center bg-green px-4 py-6 text-center font-montserrat text-2xl text-white lg:min-h-[400px] lg:flex-row lg:justify-center lg:gap-16 lg:text-start lg:text-[40px]"
         >
           <div
             class="flex max-w-[600px] flex-col gap-4 lg:h-[120px] lg:justify-end"
@@ -498,7 +456,7 @@
           <div
             class="flex flex-col items-center justify-between pt-20 text-white lg:flex-row"
           >
-            <img src="../../public/client-logo-white.svg" alt="logo klienta" />
+            <img src="client-logo-white.svg" alt="logo klienta" />
             <div
               class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
             >
@@ -535,84 +493,14 @@
             <p>Prawa zastrzeżone © 2022</p>
             <div class="flex items-center gap-4">
               <p>made by</p>
-              <img src="../../public/logo.svg" alt="logo adRespect" />
+              <img src="logo.svg" alt="logo adRespect" />
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <script>
-      const swiper = new Swiper('.mySwiper', {
-        navigation: {
-          nextEl: '.slider-next',
-          prevEl: '.slider-prev'
-        }
-      })
-    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
-    <script>
-      const macyInstance = Macy({
-        container: '.macy',
-        trueOrder: false,
-        waitForImages: true,
-        margin: 24,
-        columns: 3,
-        breakAt: {
-          1200: 3,
-          1024: 2,
-          520: 1
-        }
-      })
-
-      const expandButton = document.getElementById('expand-button')
-      const gradientElement = document.getElementById('gradient')
-      const additionalImagesCount = 9
-
-      expandButton.addEventListener('click', () => {
-        const macyContainer = document.querySelector('.macy')
-
-        for (let i = 0; i < additionalImagesCount; i++) {
-          const aElement = document.createElement('a')
-          aElement.href = `../assets/images/realizations/realization-${
-            i + 1
-          }.webp`
-          aElement.className = 'macy-item'
-          aElement.setAttribute('data-caption', `Podpis do zdjęcia ${i + 1}`)
-          const img = document.createElement('img')
-          img.src = `../assets/images/realizations/realization-${i + 1}.webp`
-          img.alt = `zdjecie: ${i + 1}`
-          aElement.appendChild(img)
-
-          macyContainer.appendChild(aElement)
-        }
-
-        macyInstance.recalculate()
-
-        macyInstance.runOnImageLoad(function () {
-          macyInstance.recalculate(true)
-        }, true)
-
-        macyInstance.remove()
-        macyInstance.reInit()
-
-        expandButton.style.display = 'none'
-        gradientElement.style.display = 'none'
-
-        baguetteBox.run('.macy a', {
-          captions: function (element) {
-            return element.getAttribute('data-caption')
-          }
-        })
-      })
-
-      window.onload = function () {
-        baguetteBox.run('.macy a', {
-          captions: function (element) {
-            return element.getAttribute('data-caption')
-          }
-        })
-      }
-    </script>
+    <script src="scripts/macy.js" type="module"></script>
+    <script src="scripts/swiper.js " type="module"></script>
   </body>
 </html>
