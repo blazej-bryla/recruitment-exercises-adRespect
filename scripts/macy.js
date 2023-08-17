@@ -17,47 +17,48 @@ const macyInstance = Macy({
   }
 })
 
-const expandButton = document.getElementById('expand-button')
-const gradientElement = document.getElementById('gradient')
-const additionalImagesCount = 9
-
-expandButton.addEventListener('click', () => {
-  const macyContainer = document.querySelector('.macy')
-
-  for (let i = 0; i < additionalImagesCount; i++) {
-    const aElement = document.createElement('a')
-    aElement.href = `public/images/realizations/realization-${i + 1}.webp`
-    aElement.className = 'macy-item'
-    aElement.setAttribute('data-caption', `Podpis do zdjęcia ${i + 1}`)
-    const img = document.createElement('img')
-    img.src = `public/images/realizations/realization-${i + 1}.webp`
-    img.alt = `zdjecie: ${i + 1}`
-    aElement.appendChild(img)
-
-    macyContainer.appendChild(aElement)
-  }
-
-  macyInstance.recalculate()
-
-  macyInstance.runOnImageLoad(function () {
-    macyInstance.recalculate(true)
-  }, true)
-
-  macyInstance.remove()
-  macyInstance.reInit()
-
-  expandButton.style.display = 'none'
-  gradientElement.style.display = 'none'
-
-  baguetteBox.run('.macy a', {
-    captions: function (element) {
-      return element.getAttribute('data-caption')
-    }
-  })
-})
-
 window.onload = function () {
-  baguetteBox.run('.macy a', {
+  const expandButton = document.getElementById('expand-button')
+  const gradientElement = document.getElementById('gradient')
+  const additionalImagesCount = 9
+
+  expandButton.addEventListener('click', () => {
+    const macyContainer = document.querySelector('.macy')
+
+    for (let i = 0; i < additionalImagesCount; i++) {
+      const aElement = document.createElement('a')
+      aElement.href = `public/images/realizations/realization-${i + 1}.webp`
+      aElement.className = 'macy-item'
+      aElement.setAttribute('data-caption', `Podpis do zdjęcia ${i + 1}`)
+      const img = document.createElement('img')
+      img.src = `public/images/realizations/realization-${i + 1}.webp`
+      img.alt = `zdjecie: ${i + 1}`
+      aElement.appendChild(img)
+
+      macyContainer.appendChild(aElement)
+    }
+
+    macyInstance.recalculate()
+
+    macyInstance.runOnImageLoad(function () {
+      macyInstance.recalculate(true)
+    }, true)
+
+    macyInstance.remove()
+    macyInstance.reInit()
+
+    expandButton.style.display = 'none'
+    gradientElement.style.display = 'none'
+
+    baguetteBox.run('.macy', {
+      buttons: 'auto',
+      captions: function (element) {
+        return element.getAttribute('data-caption')
+      }
+    })
+  })
+
+  baguetteBox.run('.macy', {
     captions: function (element) {
       return element.getAttribute('data-caption')
     }
