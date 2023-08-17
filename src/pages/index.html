@@ -11,7 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
 
     <title>Recruitment Exercise - adRespect</title>
     <link rel="stylesheet" href="../index.css" />
@@ -352,6 +359,108 @@
           </div>
         </div>
       </div>
+
+      <!-- REALIZATIONS -->
+
+      <div class="relative w-full bg-beige">
+        <div class="mx-auto w-full max-w-project pt-8">
+          <div class="px-4 project:pl-[160px]">
+            <p class="font-inter text-xs text-green">Realizacje</p>
+            <p
+              class="font-montserrat pb-12 pt-4 text-3xl font-medium lg:text-5xl"
+              >Nasze <span class="italic">projekty</span></p
+            >
+          </div>
+
+          <div class="macy">
+            <a
+              href="../assets/images/realizations/realization-1.webp"
+              data-caption="Podpis do zdjęcia 1"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-1.webp"
+                alt="Image 1"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-2.webp"
+              data-caption="Podpis do zdjęcia 2"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-2.webp"
+                alt="Image 2"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-3.webp"
+              data-caption="Podpis do zdjęcia 3"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-3.webp"
+                alt="Image 3"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-4.webp"
+              data-caption="Podpis do zdjęcia 4"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-4.webp"
+                alt="Image 4"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-5.webp"
+              data-caption="Podpis do zdjęcia 5"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-5.webp"
+                alt="Image 5"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-6.webp"
+              data-caption="Podpis do zdjęcia 6"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-6.webp"
+                alt="Image 6"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-7.webp"
+              data-caption="Podpis do zdjęcia 7"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-7.webp"
+                alt="Image 7"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-8.webp"
+              data-caption="Podpis do zdjęcia 8"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-8.webp"
+                alt="Image 8"
+            /></a>
+            <a
+              href="../assets/images/realizations/realization-9.webp"
+              data-caption="Podpis do zdjęcia 9"
+              class="macy-item"
+              ><img
+                src="../assets/images/realizations/realization-9.webp"
+                alt="Image 9"
+            /></a>
+          </div>
+          <div
+            class="absolute bottom-4 mx-auto flex w-full max-w-project justify-center"
+          >
+            <button
+              id="expand-button"
+              class="z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black"
+              >Rozwiń <img src="../assets/icons/expand-icon.svg" width="16"
+            /></button>
+          </div>
+          <div
+            id="gradient"
+            class="absolute bottom-0 right-0 h-[500px] w-full bg-gradient-to-t from-beige to-transparent"
+          ></div>
+        </div>
+      </div>
     </main>
     <footer>
       <p>footer</p>
@@ -363,6 +472,71 @@
           prevEl: '.slider-prev'
         }
       })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+    <script>
+      const macyInstance = Macy({
+        container: '.macy',
+        trueOrder: false,
+        waitForImages: true,
+        margin: 24,
+        columns: 3,
+        breakAt: {
+          1200: 3,
+          940: 2,
+          520: 1
+        }
+      })
+
+      const expandButton = document.getElementById('expand-button')
+      const gradientElement = document.getElementById('gradient')
+      const additionalImagesCount = 9
+
+      expandButton.addEventListener('click', () => {
+        const macyContainer = document.querySelector('.macy')
+
+        for (let i = 0; i < additionalImagesCount; i++) {
+          const aElement = document.createElement('a')
+          aElement.href = `../assets/images/realizations/realization-${
+            i + 1
+          }.webp`
+          aElement.className = 'macy-item'
+          aElement.setAttribute('data-caption', `Podpis do zdjęcia ${i + 1}`)
+          const img = document.createElement('img')
+          img.src = `../assets/images/realizations/realization-${i + 1}.webp`
+          img.alt = `zdjecie: ${i + 1}`
+          aElement.appendChild(img)
+
+          macyContainer.appendChild(aElement)
+        }
+
+        macyInstance.recalculate()
+
+        macyInstance.runOnImageLoad(function () {
+          macyInstance.recalculate(true)
+        }, true)
+
+        macyInstance.remove()
+        macyInstance.reInit()
+
+        expandButton.style.display = 'none'
+        gradientElement.style.display = 'none'
+
+        baguetteBox.run('.macy a', {
+          captions: function (element) {
+            return element.getAttribute('data-caption')
+          }
+        })
+      })
+
+      window.onload = function () {
+        baguetteBox.run('.macy a', {
+          captions: function (element) {
+            return element.getAttribute('data-caption')
+          }
+        })
+      }
     </script>
   </body>
 </html>
