@@ -44,9 +44,6 @@ window.onload = function () {
       macyInstance.recalculate(true)
     }, true)
 
-    macyInstance.remove()
-    macyInstance.reInit()
-
     expandButton.style.display = 'none'
     gradientElement.style.display = 'none'
 
