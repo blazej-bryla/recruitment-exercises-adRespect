@@ -88,7 +88,7 @@ function animateImages(entries, observer) {
       anime({
         targets: link,
         opacity: [0, 1],
-
+        translateY: [20, 0],
         easing: 'easeOutQuad',
         duration: 800,
         delay: delay
