@@ -27,23 +27,23 @@ function closeMenu() {
   }
 }
 
-const searchInput = document.querySelector('#searchInput')
+// const searchInput = document.querySelector('#searchInput')
 
-function showSearchbar() {
-  if (searchInput.classList.contains('hidden')) {
-    searchInput.classList.add('flex')
-    searchInput.classList.remove('hidden')
-  } else {
-    searchInput.classList.add('hidden')
-    searchInput.classList.remove('flex')
-  }
-}
+// function showSearchbar() {
+//   if (searchInput.classList.contains('hidden')) {
+//     searchInput.classList.add('flex')
+//     searchInput.classList.remove('hidden')
+//   } else {
+//     searchInput.classList.add('hidden')
+//     searchInput.classList.remove('flex')
+//   }
+// }
 
 const toggleMenu = document.querySelector('#toggleMenu')
 toggleMenu.addEventListener('click', openMenu)
 
-const toggleSearchbar = document.querySelector('#toggleSearchbar')
-toggleSearchbar.addEventListener('click', showSearchbar)
+// const toggleSearchbar = document.querySelector('#toggleSearchbar')
+// toggleSearchbar.addEventListener('click', showSearchbar)
 
 const menuItems = document.querySelectorAll('.menuItem')
 menuItems.forEach((item) => {

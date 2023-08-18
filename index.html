@@ -40,7 +40,7 @@
           class="flex items-center justify-center font-inter text-sm lg:items-start lg:justify-start"
         >
           <div
-            class="topnav pb-24 lg:flex lg:w-full lg:gap-12 lg:pb-0"
+            class="topnav items-center pb-24 lg:flex lg:w-full lg:gap-12 lg:pb-0"
             id="navigation-bar"
           >
             <div class="group relative hidden cursor-pointer flex-col lg:flex">
@@ -93,17 +93,16 @@
             <a href="#contact" class="menuItem duration-300 lg:hover:text-green"
               >Kontakt</a
             >
-            <div class="hidden w-fit gap-4 lg:flex">
+            <div class="relative hidden w-fit gap-4 lg:flex">
               <img
-                id="toggleSearchbar"
-                class="hidden cursor-pointer lg:block"
+                class="searchbarIcon hidden cursor-pointer lg:block"
                 src="icons/search-icon.svg"
                 alt="Search Icon"
               />
               <input
                 type="text"
                 id="searchInput"
-                class="hidden border border-gray"
+                class="searchbarDesktop focus:outline-green"
                 placeholder="Wyszukaj "
               />
             </div>
@@ -277,7 +276,7 @@
           >
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img
@@ -305,7 +304,7 @@
 
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img src="icons/eye-icon.svg" alt="Pencil icon" width="44" />
@@ -329,7 +328,7 @@
 
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img src="icons/stars-icon.svg" alt="Pencil icon" width="44" />
@@ -364,7 +363,7 @@
           <div
             class="flex h-full flex-col justify-center bg-green px-4 py-6 text-gray md:z-0 md:text-white"
           >
-            <div class="max-w-[600px] md:pl-8 lg:pl-16">
+            <div class="about-text max-w-[600px] md:pl-8 lg:pl-16">
               <p class="font-inter text-xs">O firmie</p>
               <p
                 class="max-w-[250px] pt-4 font-montserrat text-3xl font-medium"
@@ -579,7 +578,7 @@
       </div>
     </footer>
     <script src="scripts/navbar.js" type="module"></script>
-
+    <script src="scripts/anime.js" defer type="module"></script>
     <script src="scripts/macy.js" type="module"></script>
     <script src="scripts/swiper.js" type="module"></script>
   </body>
