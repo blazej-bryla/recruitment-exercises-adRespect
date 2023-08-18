@@ -7,12 +7,12 @@ import 'baguettebox.js/dist/baguetteBox.css'
 const macyInstance = Macy({
   container: '.macy',
   trueOrder: false,
-  waitForImages: true,
+  waitForImages: false,
   margin: 24,
   columns: 3,
   breakAt: {
     1200: 3,
-    1024: 2,
+    1023: 2,
     520: 1
   }
 })

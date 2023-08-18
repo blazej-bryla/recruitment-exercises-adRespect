@@ -17,13 +17,13 @@
     <header>
       <!-- NAVBAR -->
       <nav
-        class="mx-auto flex w-full max-w-project flex-col items-center gap-4 p-4 lg:flex-row lg:justify-between lg:gap-0 lg:p-6 project:px-[89px]"
+        class="mx-auto flex w-full max-w-project flex-col gap-4 p-4 lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:p-6 project:px-[89px]"
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
-          <img src="client-logo.svg" alt="Client Logo" />
+          <a href="/"><img src="client-logo.svg" alt="Client Logo" /></a>
           <button class="cursor-pointer lg:sr-only" id="toggleMenu">X</button>
         </div>
-        <div class="flex w-fit gap-4 lg:hidden">
+        <div class="flex w-fit gap-4 self-end lg:hidden">
           <img
             id="searchbar"
             class="cursor-pointer lg:hidden"
@@ -32,7 +32,7 @@
           />
           <input
             type="text"
-            class="border border-gray"
+            class="rounded-lg border border-gray p-2 focus:outline-green"
             placeholder="Wyszukaj "
           />
         </div>
@@ -40,12 +40,16 @@
           class="flex items-center justify-center font-inter text-sm lg:items-start lg:justify-start"
         >
           <div
-            class="topnav pb-12 lg:flex lg:w-full lg:gap-12 lg:pb-0"
+            class="topnav pb-24 lg:flex lg:w-full lg:gap-12 lg:pb-0"
             id="navigation-bar"
           >
             <div class="group relative hidden cursor-pointer flex-col lg:flex">
-              <div class="z-20 flex items-center gap-2">
-                <a href="#offer" class="z-20">Oferta</a>
+              <div class="z-20 flex h-fit items-center gap-2">
+                <a
+                  href="#offer"
+                  class="z-20 transition duration-300 lg:hover:text-green"
+                  >Oferta</a
+                >
                 <img class="px-2" src="icons/arrow-icon.svg" />
               </div>
 
@@ -53,9 +57,21 @@
                 id="dropdown"
                 class="group-hover: absolute top-0 z-10 hidden flex-col gap-[5px] p-4 pt-8 group-hover:flex lg:rounded-lg lg:bg-white"
               >
-                <a href="#realizations" class="dropdownItem">Projekty</a>
-                <a href="#realizations" class="dropdownItem">Vizualizacje</a>
-                <a href="#realizations" class="dropdownItem">Realizacje</a>
+                <a
+                  href="#realizations"
+                  class="dropdownItem duration-300 lg:hover:text-green"
+                  >Projekty</a
+                >
+                <a
+                  href="#realizations"
+                  class="dropdownItem duration-300 lg:hover:text-green"
+                  >Vizualizacje</a
+                >
+                <a
+                  href="#realizations"
+                  class="dropdownItem duration-300 lg:hover:text-green"
+                  >Realizacje</a
+                >
               </div>
             </div>
 
@@ -66,9 +82,17 @@
             >
             <a href="#realizations" class="menuItem lg:sr-only">Realizacje</a>
 
-            <a href="#about" class="menuItem">O firmie</a>
-            <a href="#realizations" class="menuItem">Realizacje</a>
-            <a href="#contact" class="menuItem">Kontakt</a>
+            <a href="#about" class="menuItem duration-300 lg:hover:text-green"
+              >O firmie</a
+            >
+            <a
+              href="#realizations"
+              class="menuItem duration-300 lg:hover:text-green"
+              >Realizacje</a
+            >
+            <a href="#contact" class="menuItem duration-300 lg:hover:text-green"
+              >Kontakt</a
+            >
             <div class="hidden w-fit gap-4 lg:flex">
               <img
                 id="toggleSearchbar"
@@ -90,7 +114,7 @@
     <main class="bg-gray">
       <!-- HERO -->
       <div class="slider w-full bg-beige">
-        <div class="mySwiper relative mx-auto w-full overflow-hidden">
+        <div class="swiper relative mx-auto w-full overflow-hidden">
           <div class="swiper-wrapper">
             <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
               <div class="items-xenter flex w-full justify-end">
@@ -111,12 +135,12 @@
                   <div class="flex flex-col gap-9 lg:flex-row">
                     <a
                       href="#contact"
-                      class="rounded-[80px] bg-green px-6 py-3 text-center text-white"
+                      class="lg:hover:bg-darkerGreen rounded-[80px] bg-green px-6 py-3 text-center text-white transition duration-300"
                       >Skontaktuj się z nami</a
                     >
                     <a
                       href="#realizations"
-                      class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
+                      class="lg:hover:border-darkerGreen lg:hover:text-darkerGreen flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green transition duration-300"
                       >Zobacz nasze realizacje
                       <img
                         src="icons/arrow-down-icon.svg"
@@ -128,7 +152,10 @@
                 </div>
               </div>
               <div class="hidden h-screen w-full lg:block">
-                <img class="swiper-slide-img" src="images/photo-1.webp" />
+                <img
+                  class="h-full w-full object-cover"
+                  src="images/photo-1.webp"
+                />
               </div>
             </div>
             <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
@@ -165,7 +192,10 @@
                 </div>
               </div>
               <div class="hidden h-screen w-full lg:block">
-                <img class="swiper-slide-img" src="images/photo-2.webp" />
+                <img
+                  class="h-full w-full object-cover"
+                  src="images/photo-2.webp"
+                />
               </div>
             </div>
             <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
@@ -202,7 +232,10 @@
                 </div>
               </div>
               <div class="hidden h-screen w-full lg:block">
-                <img class="swiper-slide-img" src="images/photo-1.webp" />
+                <img
+                  class="h-full w-full object-cover"
+                  src="images/photo-1.webp"
+                />
               </div>
             </div>
           </div>
@@ -210,11 +243,11 @@
             class="absolute bottom-1/2 right-0 z-10 flex w-full items-center justify-between lg:bottom-0 lg:w-48 lg:bg-white"
           >
             <div
-              class="slider-prev flex items-center justify-center bg-white lg:h-24 lg:w-24"
+              class="slider-prev lg:hover:bg-darkerWhite flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24"
               ><img src="icons/slider-left-icon.svg"
             /></div>
             <div
-              class="slider-next flex items-center justify-center bg-white lg:h-24 lg:w-24"
+              class="slider-next lg:hover:bg-darkerWhite flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24"
               ><img src="icons/slider-right-icon.svg"
             /></div>
           </div>
@@ -240,10 +273,11 @@
             </p>
           </div>
           <div
-            class="grid grid-cols-1 gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:pt-24 project:gap-16 project:px-[88px]"
+            class="grid cursor-pointer grid-cols-1 gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:pt-24 project:gap-16 project:px-[88px]"
           >
-            <div
-              class="flex min-h-[370px] flex-col justify-between rounded-[20px] bg-white p-10 xl:p-12"
+            <a
+              href="#realizations"
+              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img
@@ -259,16 +293,19 @@
                   wykorzystaniem istniejącej przestrzeni.</p
                 >
               </div>
-              <a
-                href="#realizations"
-                class="flex gap-4 font-inter text-green underline underline-offset-8"
+              <div
+                class="flex w-fit cursor-pointer gap-4 border-b border-b-green pb-2 font-inter text-green"
                 >Dowiedz się więcej
-                <img src="icons/offer-left-icon.svg" width="16"
-              /></a>
-            </div>
+                <img
+                  class="transition duration-300 lg:group-hover:translate-x-4"
+                  src="icons/offer-left-icon.svg"
+                  width="16"
+              /></div>
+            </a>
 
-            <div
-              class="flex min-h-[370px] flex-col justify-between rounded-[20px] bg-white p-10 xl:p-12"
+            <a
+              href="#realizations"
+              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img src="icons/eye-icon.svg" alt="Pencil icon" width="44" />
@@ -280,16 +317,19 @@
                   spaceru animowanego w technologii 3D.</p
                 >
               </div>
-              <a
-                href="#realizations"
-                class="flex gap-4 font-inter text-green underline underline-offset-8"
+              <div
+                class="flex w-fit cursor-pointer gap-4 border-b border-b-green pb-2 font-inter text-green"
                 >Dowiedz się więcej
-                <img src="icons/offer-left-icon.svg" width="16"
-              /></a>
-            </div>
+                <img
+                  class="transition duration-300 lg:group-hover:translate-x-4"
+                  src="icons/offer-left-icon.svg"
+                  width="16"
+              /></div>
+            </a>
 
-            <div
-              class="flex min-h-[370px] flex-col justify-between rounded-[20px] bg-white p-10 xl:p-12"
+            <a
+              href="#realizations"
+              class="lg:hover:bg-darkerWhite group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
             >
               <div>
                 <img src="icons/stars-icon.svg" alt="Pencil icon" width="44" />
@@ -301,13 +341,15 @@
                   i zaawansowanych technologii.</p
                 >
               </div>
-              <a
-                href="#realizations"
-                class="flex gap-4 font-inter text-green underline underline-offset-8"
-                >Zobacz nasze realizacje
-                <img src="icons/offer-left-icon.svg" width="16"
-              /></a>
-            </div>
+              <div
+                class="flex w-fit cursor-pointer gap-4 border-b border-b-green pb-2 font-inter text-green"
+                >Dowiedz się więcej
+                <img
+                  class="transition duration-300 lg:group-hover:translate-x-4"
+                  src="icons/offer-left-icon.svg"
+                  width="16"
+              /></div>
+            </a>
           </div>
         </div>
       </div>
@@ -339,7 +381,7 @@
               >
               <a
                 href="#contact"
-                class="mt-16 flex w-fit gap-4 rounded-[35px] border border-white px-6 py-4 font-inter"
+                class="lg:hover:bg-darkerGreen mt-16 flex w-fit gap-4 rounded-[35px] border border-white px-6 py-4 font-inter transition duration-300"
                 >Poznaj nas bliżej
                 <img src="icons/arrow-right-about.svg" width="16"
               /></a>
@@ -421,7 +463,7 @@
           >
             <button
               id="expand-button"
-              class="z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black"
+              class="lg:hover:bg-darkerBeige z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black transition duration-300"
               >Rozwiń <img src="icons/expand-icon.svg" width="16"
             /></button>
           </div>
@@ -456,7 +498,7 @@
             >
             <a
               href="#"
-              class="rounded-[35px] bg-white px-6 py-4 text-base text-green"
+              class="bordder-white rounded-[35px] border border-white bg-white px-6 py-4 text-base text-green transition duration-300 lg:hover:bg-green lg:hover:text-white"
               >Instagram</a
             >
           </div>
@@ -469,12 +511,16 @@
           <div
             class="flex flex-col items-center justify-between pt-20 text-white lg:flex-row"
           >
-            <img src="client-logo-white.svg" alt="logo klienta" />
+            <a href="/">
+              <img src="client-logo-white.svg" alt="logo klienta" />
+            </a>
             <div
               class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
             >
               <p class="font-inter">Daj znać, co możemy dla Ciebie zrobić!</p>
-              <a href="#contact" class="rounded-[35px] bg-green px-6 py-3"
+              <a
+                href="#contact"
+                class="lg:hover:bg-darkerGreen rounded-[35px] bg-green px-6 py-3 transition duration-300"
                 >Skontakuj się z nami</a
               >
             </div>
@@ -488,16 +534,34 @@
             <div
               class="flex flex-col gap-8 text-center lg:flex-row lg:gap-12 lg:text-start"
             >
-              <a href="#">Kontakt</a>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">LinkedIn</a>
+              <a
+                href="#contact"
+                class="transition duration-300 lg:hover:text-green"
+                >Kontakt</a
+              >
+              <a href="#" class="transition duration-300 lg:hover:text-green"
+                >Instagram</a
+              >
+              <a href="#" class="transition duration-300 lg:hover:text-green"
+                >Facebook</a
+              >
+              <a href="#" class="transition duration-300 lg:hover:text-green"
+                >LinkedIn</a
+              >
             </div>
             <div
               class="flex flex-col gap-4 pt-8 text-center font-inter text-white lg:flex-row lg:gap-12 lg:pt-0 lg:text-start"
             >
-              <a href="tel:+000-000-000">000-000-000</a>
-              <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+              <a
+                href="tel:+000-000-000"
+                class="transition duration-300 lg:hover:text-green"
+                >000-000-000</a
+              >
+              <a
+                href="mailto:giarddesign@kontakt.pl"
+                class="transition duration-300 lg:hover:text-green"
+                >giarddesign@kontakt.pl</a
+              >
             </div>
           </div>
           <div
@@ -506,7 +570,9 @@
             <p>Prawa zastrzeżone © 2022</p>
             <div class="flex items-center gap-4">
               <p>made by</p>
-              <img src="logo.svg" alt="logo adRespect" />
+              <a href="https://adrespect.pl/" target="_blank">
+                <img src="logo.svg" alt="logo adRespect" />
+              </a>
             </div>
           </div>
         </div>
