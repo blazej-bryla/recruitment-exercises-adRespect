@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-const openMenu = () => {
+function openMenu() {
   const navbar = document.querySelector('#navigation-bar')
   const root = document.documentElement
 
@@ -16,8 +15,7 @@ const openMenu = () => {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
-const openDropdown = () => {
+function openDropdown() {
   const dropdown = document.querySelector('#dropdown')
 
   if (dropdown.classList.contains('dropdown')) {
@@ -31,8 +29,7 @@ const openDropdown = () => {
 
 const searchInput = document.querySelector('#searchInput')
 
-// eslint-disable-next-line no-unused-vars
-const showSearchbar = () => {
+function showSearchbar() {
   if (searchInput.classList.contains('hidden')) {
     searchInput.classList.add('flex')
     searchInput.classList.remove('hidden')
@@ -41,3 +38,12 @@ const showSearchbar = () => {
     searchInput.classList.remove('flex')
   }
 }
+
+const toggleDropdown = document.querySelector('#toggleDropdown')
+toggleDropdown.addEventListener('click', openDropdown)
+
+const toggleMenu = document.querySelector('#toggleMenu')
+toggleMenu.addEventListener('click', openMenu)
+
+const toggleSearchbar = document.querySelector('#toggleSearchbar')
+toggleSearchbar.addEventListener('click', showSearchbar)
