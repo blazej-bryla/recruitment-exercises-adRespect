@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "baguettebox.js": "^1.11.1",
     "macy": "^2.5.1",
     "swiper": "^10.1.0"
