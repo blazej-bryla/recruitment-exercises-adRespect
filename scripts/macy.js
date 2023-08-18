@@ -27,11 +27,11 @@ window.onload = function () {
 
     for (let i = 0; i < additionalImagesCount; i++) {
       const aElement = document.createElement('a')
-      aElement.href = `public/images/realizations/realization-${i + 1}.webp`
+      aElement.href = `images/realizations/realization-${i + 1}.webp`
       aElement.className = 'macy-item'
       aElement.setAttribute('data-caption', `Podpis do zdjęcia ${i + 1}`)
       const img = document.createElement('img')
-      img.src = `public/images/realizations/realization-${i + 1}.webp`
+      img.src = `images/realizations/realization-${i + 1}.webp`
       img.alt = `zdjecie: ${i + 1}`
       aElement.appendChild(img)
 

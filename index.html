@@ -21,7 +21,7 @@
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
           <img src="client-logo.svg" alt="Client Logo" />
-          <div class="cursor-pointer lg:sr-only" onclick="openMenu()">X</div>
+          <button class="cursor-pointer lg:sr-only" id="toggleMenu">X</button>
         </div>
         <div class="flex w-fit gap-4 lg:hidden">
           <img
@@ -40,13 +40,10 @@
           class="flex items-center justify-center font-inter text-sm lg:items-start lg:justify-start"
         >
           <div class="topnav lg:flex lg:w-full lg:gap-12" id="navigation-bar">
-            <div
-              onclick="openDropdown()"
-              class="relative flex cursor-pointer flex-col"
-            >
-              <span class="flex"
-                >Oferta <img class="px-2" src="icons/arrow-icon.svg"
-              /></span>
+            <div class="relative flex cursor-pointer flex-col">
+              <button id="toggleDropdown" class="flex gap-2">
+                Oferta <img class="px-2" src="icons/arrow-icon.svg" />
+              </button>
               <div
                 id="dropdown"
                 class="dropdown z-10 lg:rounded-lg lg:bg-white"
@@ -61,11 +58,10 @@
             <a href="#contact">Kontakt</a>
             <div class="hidden w-fit gap-4 lg:flex">
               <img
-                id="searchbar"
+                id="toggleSearchbar"
                 class="hidden cursor-pointer lg:block"
                 src="icons/search-icon.svg"
                 alt="Search Icon"
-                onclick="showSearchbar()"
               />
               <input
                 type="text"
@@ -498,9 +494,9 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/navbar.js" type="module"></script>
 
     <script src="scripts/macy.js" type="module"></script>
     <script src="scripts/swiper.js" type="module"></script>
-    <script src="scripts/navbar.js" type="module"></script>
   </body>
 </html>
