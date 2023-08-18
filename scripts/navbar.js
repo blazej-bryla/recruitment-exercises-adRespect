@@ -15,15 +15,15 @@ function openMenu() {
   }
 }
 
-function openDropdown() {
-  const dropdown = document.querySelector('#dropdown')
+function closeMenu() {
+  const navbar = document.querySelector('#navigation-bar')
+  const root = document.documentElement
 
-  if (dropdown.classList.contains('dropdown')) {
-    dropdown.classList.remove('dropdown')
-    dropdown.classList.add('dropped')
-  } else {
-    dropdown.classList.remove('dropped')
-    dropdown.classList.add('dropdown')
+  if (navbar.classList.contains('mobile')) {
+    navbar.classList.add('topnav')
+    root.classList.remove('overflow-hidden')
+
+    navbar.classList.remove('mobile')
   }
 }
 
@@ -39,11 +39,13 @@ function showSearchbar() {
   }
 }
 
-const toggleDropdown = document.querySelector('#toggleDropdown')
-toggleDropdown.addEventListener('click', openDropdown)
-
 const toggleMenu = document.querySelector('#toggleMenu')
 toggleMenu.addEventListener('click', openMenu)
 
 const toggleSearchbar = document.querySelector('#toggleSearchbar')
 toggleSearchbar.addEventListener('click', showSearchbar)
+
+const menuItems = document.querySelectorAll('.menuItem')
+menuItems.forEach((item) => {
+  item.addEventListener('click', closeMenu)
+})

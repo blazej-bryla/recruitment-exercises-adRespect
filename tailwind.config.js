@@ -12,9 +12,11 @@ export default {
       },
       colors: {
         green: '#1B5B31',
+        darkerGreen: '#18522c',
         gray: '#F5F0EC',
         beige: '#DCC1AB',
-        black: '#111111'
+        black: '#111111',
+        darkerWhite: '#ebebeb'
       },
       textColor: {
         white: '#F5F0EC'
