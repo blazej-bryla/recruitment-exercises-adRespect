@@ -9,10 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap"
       rel="stylesheet"
     />
-
     <title>Recruitment Exercise - adRespect</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
       <!-- NAVBAR -->
@@ -20,93 +20,154 @@
         class="mx-auto flex w-full max-w-project flex-col gap-4 p-4 lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:p-6 project:px-[89px]"
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
-          <a href="/"><img src="client-logo.svg" alt="Client Logo" /></a>
-          <button class="cursor-pointer lg:sr-only" id="toggleMenu">X</button>
+          <a href="/" title="Odnośnik do strony głównej"
+            ><img src="client-logo.svg" alt="Logo firmy giarddesign"
+          /></a>
+          <button class="menu-button cursor-pointer lg:sr-only" id="toggleMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </button>
         </div>
         <div class="flex w-fit gap-4 self-end lg:hidden">
-          <img
-            id="searchbar"
-            class="cursor-pointer lg:hidden"
-            src="icons/search-icon.svg"
-            alt="Search Icon"
-          />
-          <input
-            type="text"
-            class="rounded-lg border border-gray p-2 focus:outline-green"
-            placeholder="Wyszukaj "
-          />
+          <form>
+            <label class="sr-only" for="searchbar-input">Wyszukaj</label>
+            <input
+              name="searchbar-input"
+              id="searchbar-input"
+              type="text"
+              class="rounded-lg border border-green p-2 font-inter focus:outline-green"
+              placeholder="Wyszukaj"
+            />
+            <button
+              type="submit"
+              id="searchbar-button"
+              class="rounded-lg bg-green p-2 font-inter text-white"
+              >Szukaj</button
+            >
+          </form>
         </div>
         <div
           class="flex items-center justify-center font-inter text-sm lg:items-start lg:justify-start"
         >
-          <div
-            class="topnav items-center pb-24 lg:flex lg:w-full lg:gap-12 lg:pb-0"
+          <ul
+            class="topnav items-center pb-24 lg:flex lg:w-full lg:pb-0"
             id="navigation-bar"
           >
-            <div class="group relative hidden cursor-pointer flex-col lg:flex">
-              <div class="z-20 flex h-fit items-center gap-2">
-                <a
-                  href="#offer"
-                  class="z-20 transition duration-300 lg:hover:text-green"
-                  >Oferta</a
+            <li
+              class="group relative hidden cursor-pointer flex-col lg:flex lg:pr-12"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="#offer"
+                    title="Odnośnik do sekcji oferta"
+                    class="flex h-fit items-center gap-2"
+                  >
+                    <span
+                      class="z-20 transition duration-300 lg:hover:text-green"
+                      >Oferta</span
+                    >
+                    <img
+                      src="icons/arrow-icon.svg"
+                      width="12"
+                      height="12"
+                      alt="ikona strzałki obok zakładki oferta"
+                      class="z-20"
+                    />
+                  </a>
+                </li>
+                <ul
+                  class="group-hover: absolute top-0 z-10 hidden flex-col gap-[5px] p-4 pt-8 group-hover:flex lg:rounded-lg lg:bg-white"
                 >
-                <img class="px-2" src="icons/arrow-icon.svg" />
-              </div>
-
-              <div
-                id="dropdown"
-                class="group-hover: absolute top-0 z-10 hidden flex-col gap-[5px] p-4 pt-8 group-hover:flex lg:rounded-lg lg:bg-white"
-              >
+                  <li>
+                    <a
+                      href="#realizations"
+                      class="dropdownItem duration-300 lg:hover:text-green"
+                      >Projekty</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#realizations"
+                      class="dropdownItem duration-300 lg:hover:text-green"
+                      >Vizualizacje</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#realizations"
+                      class="dropdownItem duration-300 lg:hover:text-green"
+                      >Realizacje</a
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </li>
+            <ul
+              class="flex h-full flex-col items-center justify-evenly lg:flex-row lg:gap-12"
+            >
+              <li class="lg:sr-only">
+                <a href="#offer" class="menuItem">Oferta</a>
+              </li>
+              <li class="lg:sr-only">
+                <a href="#realizations" class="menuItem">Projekty</a>
+              </li>
+              <li class="lg:sr-only">
+                <a href="#visualizations" class="menuItem">Vizualizacje</a>
+              </li>
+              <li class="lg:sr-only">
+                <a href="#realizations" class="menuItem">Realizacje</a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="menuItem duration-300 lg:hover:text-green"
+                  >O firmie</a
+                >
+              </li>
+              <li>
                 <a
                   href="#realizations"
-                  class="dropdownItem duration-300 lg:hover:text-green"
-                  >Projekty</a
-                >
-                <a
-                  href="#realizations"
-                  class="dropdownItem duration-300 lg:hover:text-green"
-                  >Vizualizacje</a
-                >
-                <a
-                  href="#realizations"
-                  class="dropdownItem duration-300 lg:hover:text-green"
+                  class="menuItem duration-300 lg:hover:text-green"
                   >Realizacje</a
                 >
-              </div>
-            </div>
-
-            <a href="#offer" class="menuItem lg:sr-only">Oferta</a>
-            <a href="#realizations" class="menuItem lg:sr-only">Projekty</a>
-            <a href="#visualizations" class="menuItem lg:sr-only"
-              >Vizualizacje</a
-            >
-            <a href="#realizations" class="menuItem lg:sr-only">Realizacje</a>
-
-            <a href="#about" class="menuItem duration-300 lg:hover:text-green"
-              >O firmie</a
-            >
-            <a
-              href="#realizations"
-              class="menuItem duration-300 lg:hover:text-green"
-              >Realizacje</a
-            >
-            <a href="#contact" class="menuItem duration-300 lg:hover:text-green"
-              >Kontakt</a
-            >
-            <div class="relative hidden w-fit gap-4 lg:flex">
-              <img
-                class="searchbarIcon hidden cursor-pointer lg:block"
-                src="icons/search-icon.svg"
-                alt="Search Icon"
-              />
-              <input
-                type="text"
-                id="searchInput"
-                class="searchbarDesktop focus:outline-green"
-                placeholder="Wyszukaj "
-              />
-            </div>
-          </div>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="menuItem duration-300 lg:hover:text-green"
+                  >Kontakt</a
+                >
+              </li>
+              <li>
+                <form class="relative hidden w-fit items-center gap-4 lg:flex">
+                  <label class="sr-only" for="searchbar-input-desktop"
+                    >Wyszukaj</label
+                  >
+                  <img
+                    class="searchbarIcon hidden cursor-pointer lg:block"
+                    src="icons/search-icon.svg"
+                    alt="Ikona wyszukiwarki"
+                    width="24"
+                    height="30"
+                  />
+                  <input
+                    name="searchbar-input-desktop"
+                    id="searchbar-input-desktop"
+                    type="text"
+                    class="searchbarDesktop font-inter focus:outline-green"
+                    placeholder="Wyszukaj "
+                  />
+                  <button
+                    type="submit"
+                    id="searchbar-button-desktop"
+                    class="searchbar-button-desktop rounded-lg bg-green font-inter text-white"
+                  ></button>
+                </form>
+              </li>
+            </ul>
+          </ul>
         </div>
       </nav>
     </header>
@@ -116,7 +177,7 @@
         <div class="swiper relative mx-auto w-full overflow-hidden">
           <div class="swiper-wrapper">
             <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
-              <div class="items-xenter flex w-full justify-end">
+              <div class="flex w-full items-center justify-end">
                 <div
                   class="slider absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-4 project:mr-[40px] project:pl-0"
                 >
@@ -133,18 +194,20 @@
                   >
                   <div class="flex flex-col gap-9 lg:flex-row">
                     <a
+                      title="Odnośnik do sekcji kontakt"
                       href="#contact"
-                      class="lg:hover:bg-darkerGreen rounded-[80px] bg-green px-6 py-3 text-center text-white transition duration-300"
+                      class="rounded-[80px] bg-green px-6 py-3 text-center font-inter text-white transition duration-300 lg:text-sm lg:hover:bg-darkerGreen xl:text-base"
                       >Skontaktuj się z nami</a
                     >
                     <a
                       href="#realizations"
-                      class="lg:hover:border-darkerGreen lg:hover:text-darkerGreen flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green transition duration-300"
+                      title="Odnośnik do sekcji realizacji"
+                      class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 font-inter text-green transition duration-300 lg:text-sm lg:hover:border-darkerGreen lg:hover:text-darkerGreen xl:text-base"
                       >Zobacz nasze realizacje
                       <img
                         src="icons/arrow-down-icon.svg"
-                        width="16px"
-                        height="16px"
+                        width="16"
+                        height="16"
                       />
                     </a>
                   </div>
@@ -153,87 +216,104 @@
               <div class="hidden h-screen w-full lg:block">
                 <img
                   class="h-full w-full object-cover"
+                  width="696"
+                  height="745"
+                  alt="Zdjęcie ogrodu z lotu ptaka"
                   src="images/photo-1.webp"
                 />
               </div>
             </div>
             <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
-              <div
-                class="slider absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-6 project:pl-[89px]"
-              >
-                <p
-                  class="w-1/2 text-center font-inter text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
+              <div class="flex w-full items-center justify-end">
+                <div
+                  class="slider absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-4 project:mr-[40px] project:pl-0"
                 >
-                  Nowoczesna aranżacja Twojego ogrodu
-                </p>
-                <p
-                  class="w-1/2 text-center font-inter text-sm lg:w-full lg:text-start lg:text-base"
-                  >Marka GiardDesign to wieloletnie doświadczenie i wysoka
-                  estetyka realizacji. Oferujemy kompleksowy zakres usługz
-                  indywidualnym podejściem do każdego projektu.</p
-                >
-                <div class="flex flex-col gap-9 lg:flex-row">
-                  <a
-                    href="#contact"
-                    class="rounded-[80px] bg-green px-6 py-3 text-center text-white"
-                    >Skontaktuj się z nami</a
+                  <p
+                    class="w-1/2 text-center font-inter text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
                   >
-                  <a
-                    href="#realizations"
-                    class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
-                    >Zobacz nasze realizacje
-                    <img
-                      src="icons/arrow-down-icon.svg"
-                      width="16px"
-                      height="16px"
-                    />
-                  </a>
+                    Nowoczesna aranżacja Twojego ogrodu
+                  </p>
+                  <p
+                    class="w-1/2 max-w-[500px] text-center font-inter text-sm lg:w-full lg:text-start lg:text-base"
+                    >Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                    estetyka realizacji. Oferujemy kompleksowy zakres usługz
+                    indywidualnym podejściem do każdego projektu.</p
+                  >
+                  <div class="flex flex-col gap-9 lg:flex-row">
+                    <a
+                      title="Odnośnik do sekcji kontakt"
+                      href="#contact"
+                      class="rounded-[80px] bg-green px-6 py-3 text-center font-inter text-white transition duration-300 lg:text-sm lg:hover:bg-darkerGreen xl:text-base"
+                      >Skontaktuj się z nami</a
+                    >
+                    <a
+                      href="#realizations"
+                      title="Odnośnik do sekcji realizacji"
+                      class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 font-inter text-green transition duration-300 lg:text-sm lg:hover:border-darkerGreen lg:hover:text-darkerGreen xl:text-base"
+                      >Zobacz nasze realizacje
+                      <img
+                        src="icons/arrow-down-icon.svg"
+                        width="16"
+                        height="16"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="hidden h-screen w-full lg:block">
                 <img
                   class="h-full w-full object-cover"
+                  width="696"
+                  height="745"
+                  alt="Zdjęcie ogrodu z lotu ptaka"
+                  src="images/photo-1.webp"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
+              <div class="flex w-full items-center justify-end">
+                <div
+                  class="slider absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-4 project:mr-[40px] project:pl-0"
+                >
+                  <p
+                    class="w-1/2 text-center font-inter text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
+                  >
+                    Nowoczesna aranżacja Twojego ogrodu
+                  </p>
+                  <p
+                    class="w-1/2 max-w-[500px] text-center font-inter text-sm lg:w-full lg:text-start lg:text-base"
+                    >Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                    estetyka realizacji. Oferujemy kompleksowy zakres usługz
+                    indywidualnym podejściem do każdego projektu.</p
+                  >
+                  <div class="flex flex-col gap-9 lg:flex-row">
+                    <a
+                      title="Odnośnik do sekcji kontakt"
+                      href="#contact"
+                      class="rounded-[80px] bg-green px-6 py-3 text-center font-inter text-white transition duration-300 lg:text-sm lg:hover:bg-darkerGreen xl:text-base"
+                      >Skontaktuj się z nami</a
+                    >
+                    <a
+                      href="#realizations"
+                      title="Odnośnik do sekcji realizacji"
+                      class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 font-inter text-green transition duration-300 lg:text-sm lg:hover:border-darkerGreen lg:hover:text-darkerGreen xl:text-base"
+                      >Zobacz nasze realizacje
+                      <img
+                        src="icons/arrow-down-icon.svg"
+                        width="16"
+                        height="16"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden h-screen w-full lg:block">
+                <img
+                  class="h-full w-full object-cover"
+                  width="688"
+                  height="720"
+                  alt="Zdjęcie ogrodu obok domu"
                   src="images/photo-2.webp"
-                />
-              </div>
-            </div>
-            <div class="swiper-slide w-full lg:grid lg:grid-cols-2">
-              <div
-                class="slider absolute z-10 flex w-full flex-col items-center justify-center gap-12 lg:static lg:max-w-[600px] lg:items-start lg:justify-center lg:pl-6 project:pl-[89px]"
-              >
-                <p
-                  class="w-1/2 text-center font-inter text-2xl font-medium lg:w-full lg:text-start lg:text-6xl"
-                >
-                  Nowoczesna aranżacja Twojego ogrodu
-                </p>
-                <p
-                  class="w-1/2 text-center font-inter text-sm lg:w-full lg:text-start lg:text-base"
-                  >Marka GiardDesign to wieloletnie doświadczenie i wysoka
-                  estetyka realizacji. Oferujemy kompleksowy zakres usługz
-                  indywidualnym podejściem do każdego projektu.</p
-                >
-                <div class="flex flex-col gap-9 lg:flex-row">
-                  <a
-                    href="#contact"
-                    class="rounded-[80px] bg-green px-6 py-3 text-center text-white"
-                    >Skontaktuj się z nami</a
-                  >
-                  <a
-                    href="#realizations"
-                    class="flex items-center justify-center gap-2 rounded-[80px] border border-green px-6 py-3 text-green"
-                    >Zobacz nasze realizacje
-                    <img
-                      src="icons/arrow-down-icon.svg"
-                      width="16px"
-                      height="16px"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="hidden h-screen w-full lg:block">
-                <img
-                  class="h-full w-full object-cover"
-                  src="images/photo-1.webp"
                 />
               </div>
             </div>
@@ -242,12 +322,20 @@
             class="absolute bottom-1/2 right-0 z-10 flex w-full items-center justify-between lg:bottom-0 lg:w-48 lg:bg-white"
           >
             <div
-              class="slider-prev lg:hover:bg-darkerWhite flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24"
-              ><img src="icons/slider-left-icon.svg"
+              class="slider-prev flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24 lg:hover:bg-darkerWhite"
+              ><img
+                src="icons/slider-left-icon.svg"
+                width="48"
+                height="48"
+                alt="strzałka w lewo"
             /></div>
             <div
-              class="slider-next lg:hover:bg-darkerWhite flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24"
-              ><img src="icons/slider-right-icon.svg"
+              class="slider-next flex cursor-pointer items-center justify-center bg-white transition duration-300 lg:h-24 lg:w-24 lg:hover:bg-darkerWhite"
+              ><img
+                src="icons/slider-right-icon.svg"
+                width="48"
+                height="48"
+                alt="strzałka w prawo"
             /></div>
           </div>
         </div>
@@ -272,17 +360,18 @@
             </p>
           </div>
           <div
-            class="grid cursor-pointer grid-cols-1 gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:pt-24 project:gap-16 project:px-[88px]"
+            class="grid grid-cols-1 gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:pt-24 project:gap-16 project:px-[88px]"
           >
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green lg:hover:bg-darkerWhite xl:p-12"
             >
               <div>
                 <img
                   src="icons/pencil-icons.svg"
-                  alt="Pencil icon"
+                  alt="Ikona ołówka"
                   width="44"
+                  height="44"
                 />
                 <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Projekty</p
@@ -299,15 +388,22 @@
                   class="transition duration-300 lg:group-hover:translate-x-4"
                   src="icons/offer-left-icon.svg"
                   width="16"
+                  height="16"
+                  alt="strzałka w prawo"
               /></div>
             </a>
 
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green lg:hover:bg-darkerWhite xl:p-12"
             >
               <div>
-                <img src="icons/eye-icon.svg" alt="Pencil icon" width="44" />
+                <img
+                  src="icons/eye-icon.svg"
+                  alt="Ikona oka"
+                  width="44"
+                  height="44"
+                />
                 <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Wizualizacje</p
                 >
@@ -323,15 +419,22 @@
                   class="transition duration-300 lg:group-hover:translate-x-4"
                   src="icons/offer-left-icon.svg"
                   width="16"
+                  height="16"
+                  alt="strzałka w prawo"
               /></div>
             </a>
 
             <a
               href="#realizations"
-              class="lg:hover:bg-darkerWhite offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green xl:p-12"
+              class="offer-item group flex min-h-[370px] flex-col justify-between rounded-[20px] border border-white bg-white p-10 transition duration-300 lg:hover:border lg:hover:border-green lg:hover:bg-darkerWhite xl:p-12"
             >
               <div>
-                <img src="icons/stars-icon.svg" alt="Pencil icon" width="44" />
+                <img
+                  src="icons/stars-icon.svg"
+                  alt="Ikona gwiazd"
+                  width="44"
+                  height="44"
+                />
                 <p class="pt-8 font-montserrat text-[28px] font-medium"
                   >Realizacje</p
                 >
@@ -342,11 +445,13 @@
               </div>
               <div
                 class="flex w-fit cursor-pointer gap-4 border-b border-b-green pb-2 font-inter text-green"
-                >Dowiedz się więcej
+                >Zobacz nasze realizacje
                 <img
                   class="transition duration-300 lg:group-hover:translate-x-4"
                   src="icons/offer-left-icon.svg"
                   width="16"
+                  height="16"
+                  alt="strzałka w prawo"
               /></div>
             </a>
           </div>
@@ -357,6 +462,9 @@
         <div class="relative grid grid-cols-1 md:grid-cols-2">
           <img
             src="images/photo-2.webp"
+            width="688"
+            height="720"
+            alt="Zdjęcie ogrodu obok domu"
             class="hidden h-full w-full object-cover md:block"
           />
 
@@ -380,9 +488,13 @@
               >
               <a
                 href="#contact"
-                class="lg:hover:bg-darkerGreen mt-16 flex w-fit gap-4 rounded-[35px] border border-white px-6 py-4 font-inter transition duration-300"
+                class="mt-16 flex w-fit gap-4 rounded-[35px] border border-white px-6 py-4 font-inter transition duration-300 lg:hover:bg-darkerGreen"
                 >Poznaj nas bliżej
-                <img src="icons/arrow-right-about.svg" width="16"
+                <img
+                  src="icons/arrow-right-about.svg"
+                  width="16"
+                  height="16"
+                  alt="ikona strzałki w prawo"
               /></a>
             </div>
           </div>
@@ -403,58 +515,103 @@
 
           <div class="macy">
             <a
+              title="Odnośnik do zdjęcia 1"
               href="images/realizations/realization-1.webp"
               data-caption="Podpis do zdjęcia 1"
               class="macy-item"
-              ><img src="images/realizations/realization-1.webp" alt="Image 1"
+              ><img
+                src="images/realizations/realization-1.webp"
+                alt="realizacja 1"
+                width="451"
+                height="601"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 2"
               href="images/realizations/realization-2.webp"
               data-caption="Podpis do zdjęcia 2"
               class="macy-item"
-              ><img src="images/realizations/realization-2.webp" alt="Image 2"
+              ><img
+                src="images/realizations/realization-2.webp"
+                alt="realizacja 2"
+                width="452"
+                height="388"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 3"
               href="images/realizations/realization-3.webp"
               data-caption="Podpis do zdjęcia 3"
               class="macy-item"
-              ><img src="images/realizations/realization-3.webp" alt="Image 3"
+              ><img
+                src="images/realizations/realization-3.webp"
+                alt="realizacja 3"
+                width="451"
+                height="451"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 4"
               href="images/realizations/realization-4.webp"
               data-caption="Podpis do zdjęcia 4"
               class="macy-item"
-              ><img src="images/realizations/realization-4.webp" alt="Image 4"
+              ><img
+                src="images/realizations/realization-4.webp"
+                alt="realizacja 4"
+                width="451"
+                height="452"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 5"
               href="images/realizations/realization-5.webp"
               data-caption="Podpis do zdjęcia 5"
               class="macy-item"
-              ><img src="images/realizations/realization-5.webp" alt="Image 5"
+              ><img
+                src="images/realizations/realization-5.webp"
+                alt="realizacja 5"
+                width="451"
+                height="452"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 6"
               href="images/realizations/realization-6.webp"
               data-caption="Podpis do zdjęcia 6"
               class="macy-item"
-              ><img src="images/realizations/realization-6.webp" alt="Image 6"
+              ><img
+                src="images/realizations/realization-6.webp"
+                alt="realizacja 6"
+                width="451"
+                height="603"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 7"
               href="images/realizations/realization-7.webp"
               data-caption="Podpis do zdjęcia 7"
               class="macy-item"
-              ><img src="images/realizations/realization-7.webp" alt="Image 7"
+              ><img
+                src="images/realizations/realization-7.webp"
+                alt="realizacja 7"
+                width="451"
+                height="388"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 8"
               href="images/realizations/realization-8.webp"
               data-caption="Podpis do zdjęcia 8"
               class="macy-item"
-              ><img src="images/realizations/realization-8.webp" alt="Image 8"
+              ><img
+                src="images/realizations/realization-8.webp"
+                alt="realizacja 8"
+                width="452"
+                height="601"
             /></a>
             <a
+              title="Odnośnik do zdjęcia 9"
               href="images/realizations/realization-9.webp"
               data-caption="Podpis do zdjęcia 9"
               class="macy-item"
-              ><img src="images/realizations/realization-9.webp" alt="Image 9"
+              ><img
+                src="images/realizations/realization-9.webp"
+                alt="realizacja 9"
+                width="451"
+                height="388"
             /></a>
           </div>
           <div
@@ -462,8 +619,13 @@
           >
             <button
               id="expand-button"
-              class="lg:hover:bg-darkerBeige z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black transition duration-300"
-              >Rozwiń <img src="icons/expand-icon.svg" width="16"
+              class="z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black transition duration-300 lg:hover:bg-darkerBeige"
+              >Rozwiń
+              <img
+                src="icons/expand-icon.svg"
+                width="16"
+                height="16"
+                alt="Strzałka w dół"
             /></button>
           </div>
           <div
@@ -496,6 +658,7 @@
               >Śledź nasze najnowsze realizacje!</p
             >
             <a
+              title="Odnośnik do instagrama"
               href="#"
               class="bordder-white rounded-[35px] border border-white bg-white px-6 py-4 text-base text-green transition duration-300 lg:hover:bg-green lg:hover:text-white"
               >Instagram</a
@@ -504,22 +667,31 @@
         </div>
       </div>
     </main>
+
+    <!-- FOOTER -->
+
     <footer class="w-full bg-black">
       <div class="mx-auto max-w-project px-4 project:px-0">
         <div class="mx-auto max-w-[1040px]">
           <div
             class="flex flex-col items-center justify-between pt-20 text-white lg:flex-row"
           >
-            <a href="/">
-              <img src="client-logo-white.svg" alt="logo klienta" />
+            <a href="/" title="Odnośnik do strony głównej">
+              <img
+                src="client-logo-white.svg"
+                alt="Logo firmy giarddesign"
+                width="115"
+                height="20"
+              />
             </a>
             <div
               class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
             >
               <p class="font-inter">Daj znać, co możemy dla Ciebie zrobić!</p>
               <a
+                title="Odnośnik do kontaktu"
                 href="#contact"
-                class="lg:hover:bg-darkerGreen rounded-[35px] bg-green px-6 py-3 transition duration-300"
+                class="rounded-[35px] bg-green px-6 py-3 transition duration-300 lg:hover:bg-darkerGreen"
                 >Skontakuj się z nami</a
               >
             </div>
@@ -534,17 +706,27 @@
               class="flex flex-col gap-8 text-center lg:flex-row lg:gap-12 lg:text-start"
             >
               <a
+                title="Odnośnik do kontaktu"
                 href="#contact"
                 class="transition duration-300 lg:hover:text-green"
                 >Kontakt</a
               >
-              <a href="#" class="transition duration-300 lg:hover:text-green"
+              <a
+                href="#"
+                class="transition duration-300 lg:hover:text-green"
+                title="Odnośnik do instagrama"
                 >Instagram</a
               >
-              <a href="#" class="transition duration-300 lg:hover:text-green"
+              <a
+                href="#"
+                class="transition duration-300 lg:hover:text-green"
+                title="Odnośnik do facebooka"
                 >Facebook</a
               >
-              <a href="#" class="transition duration-300 lg:hover:text-green"
+              <a
+                href="#"
+                class="transition duration-300 lg:hover:text-green"
+                title="Odnośnik do linkedin"
                 >LinkedIn</a
               >
             </div>
@@ -552,11 +734,13 @@
               class="flex flex-col gap-4 pt-8 text-center font-inter text-white lg:flex-row lg:gap-12 lg:pt-0 lg:text-start"
             >
               <a
+                title="Zadzwoń"
                 href="tel:+000-000-000"
                 class="transition duration-300 lg:hover:text-green"
                 >000-000-000</a
               >
               <a
+                title="Wyślij maila"
                 href="mailto:giarddesign@kontakt.pl"
                 class="transition duration-300 lg:hover:text-green"
                 >giarddesign@kontakt.pl</a
@@ -569,8 +753,17 @@
             <p>Prawa zastrzeżone © 2022</p>
             <div class="flex items-center gap-4">
               <p>made by</p>
-              <a href="https://adrespect.pl/" target="_blank">
-                <img src="logo.svg" alt="logo adRespect" />
+              <a
+                href="https://adrespect.pl/"
+                title="Odnośnik do strony firmy adRespect - realizatora tej strony"
+                target="_blank"
+              >
+                <img
+                  src="logo.svg"
+                  alt="logo firmy adRespect"
+                  width="113"
+                  height="24"
+                />
               </a>
             </div>
           </div>
@@ -581,5 +774,6 @@
     <script src="scripts/anime.js" defer type="module"></script>
     <script src="scripts/macy.js" type="module"></script>
     <script src="scripts/swiper.js" type="module"></script>
+    <script src="scripts/searchbar.js" type="module"></script>
   </body>
 </html>

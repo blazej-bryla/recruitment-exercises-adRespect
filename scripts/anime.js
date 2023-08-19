@@ -2,6 +2,7 @@ import anime from 'animejs/lib/anime.es'
 
 const searchIcon = document.querySelector('.searchbarIcon')
 const searchInput = document.querySelector('.searchbarDesktop')
+const searchInputButton = document.querySelector('.searchbar-button-desktop')
 
 let inputExpanded = false
 
@@ -15,14 +16,35 @@ searchIcon.addEventListener('click', () => {
       complete: () => {
         searchInput.classList.add('border', 'border-green')
       }
-    })
+    }),
+      anime({
+        targets: searchInputButton,
+        width: ['0', '60px'],
+        easing: 'easeOutQuad',
+        complete: () => {
+          searchInputButton.innerHTML = 'Szukaj'
+        },
+        duration: 300
+      })
   } else {
     anime({
       targets: searchInput,
       width: ['150px', '0'],
       easing: 'easeOutQuad',
+      complete: () => {
+        searchInput.classList.remove('border', 'border-green')
+      },
       duration: 300
-    })
+    }),
+      anime({
+        targets: searchInputButton,
+        width: ['60px', '0'],
+        easing: 'easeOutQuad',
+        complete: () => {
+          searchInputButton.innerHTML = ''
+        },
+        duration: 300
+      })
   }
 
   inputExpanded = !inputExpanded
