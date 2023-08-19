@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nowoczesna aranżacja Twojego ogrodu to wartościowe połączenie estetyki i funkcjonalności. Odkryj inspirujące pomysły na rośliny i projektowanie wnętrz w Twojej przestrzeni zieleni. Za pomocą Grand Design, stwórz wymarzone miejsce do odpoczynku i relaksu."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +25,17 @@
       >
         <div class="flex w-full items-center justify-between lg:w-fit">
           <a href="/" title="Odnośnik do strony głównej"
-            ><img src="client-logo.svg" alt="Logo firmy giarddesign"
+            ><img
+              src="client-logo.svg"
+              width="115"
+              height="20"
+              alt="Logo firmy giarddesign"
           /></a>
-          <button class="menu-button cursor-pointer lg:sr-only" id="toggleMenu">
+          <button
+            class="menu-button cursor-pointer lg:sr-only"
+            name="Przycisk otwierania i zamykania menu"
+            id="toggleMenu"
+          >
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -40,6 +52,7 @@
               placeholder="Wyszukaj"
             />
             <button
+              name="Przycisk zatwierdzenia wyszukiwania"
               type="submit"
               id="searchbar-button"
               class="rounded-lg bg-green p-2 font-inter text-white"
@@ -50,6 +63,7 @@
         <div
           class="flex items-center justify-center font-inter text-sm lg:items-start lg:justify-start"
         >
+          <p class="sr-only">Menu</p>
           <ul
             class="topnav items-center pb-24 lg:flex lg:w-full lg:pb-0"
             id="navigation-bar"
@@ -57,6 +71,7 @@
             <li
               class="group relative hidden cursor-pointer flex-col lg:flex lg:pr-12"
             >
+              <p class="sr-only">Zakładka oferta</p>
               <ul>
                 <li>
                   <a
@@ -77,6 +92,7 @@
                     />
                   </a>
                 </li>
+                <p class="sr-only">Podzakładki oferty</p>
                 <ul
                   class="group-hover: absolute top-0 z-10 hidden flex-col gap-[5px] p-4 pt-8 group-hover:flex lg:rounded-lg lg:bg-white"
                 >
@@ -104,6 +120,7 @@
                 </ul>
               </ul>
             </li>
+            <p class="sr-only">Pełne menu</p>
             <ul
               class="flex h-full flex-col items-center justify-evenly lg:flex-row lg:gap-12"
             >
@@ -160,6 +177,7 @@
                     placeholder="Wyszukaj "
                   />
                   <button
+                    name="Przycisk zatwierdzenia wyszukiwania"
                     type="submit"
                     id="searchbar-button-desktop"
                     class="searchbar-button-desktop rounded-lg bg-green font-inter text-white"
@@ -206,6 +224,7 @@
                       >Zobacz nasze realizacje
                       <img
                         src="icons/arrow-down-icon.svg"
+                        alt="Ikona strzałki w dół"
                         width="16"
                         height="16"
                       />
@@ -253,6 +272,7 @@
                       >Zobacz nasze realizacje
                       <img
                         src="icons/arrow-down-icon.svg"
+                        alt="Ikona strzałki w dół"
                         width="16"
                         height="16"
                       />
@@ -300,6 +320,7 @@
                       >Zobacz nasze realizacje
                       <img
                         src="icons/arrow-down-icon.svg"
+                        alt="Ikona strzałki w dół"
                         width="16"
                         height="16"
                       />
@@ -618,6 +639,7 @@
             class="absolute bottom-4 mx-auto flex w-full max-w-project justify-center"
           >
             <button
+              name="Przycisk rozwinięcia listy realizacji"
               id="expand-button"
               class="z-10 mt-4 flex items-center gap-4 rounded-[35px] border border-black px-6 py-4 text-black transition duration-300 lg:hover:bg-darkerBeige"
               >Rozwiń
@@ -676,25 +698,34 @@
           <div
             class="flex flex-col items-center justify-between pt-20 text-white lg:flex-row"
           >
-            <a href="/" title="Odnośnik do strony głównej">
-              <img
-                src="client-logo-white.svg"
-                alt="Logo firmy giarddesign"
-                width="115"
-                height="20"
-              />
-            </a>
-            <div
-              class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
-            >
-              <p class="font-inter">Daj znać, co możemy dla Ciebie zrobić!</p>
-              <a
-                title="Odnośnik do kontaktu"
-                href="#contact"
-                class="rounded-[35px] bg-green px-6 py-3 transition duration-300 lg:hover:bg-darkerGreen"
-                >Skontakuj się z nami</a
-              >
-            </div>
+            <p class="sr-only">Menu powtórzone - strona główna, kontakt</p>
+            <ul>
+              <li>
+                <a href="/" title="Odnośnik do strony głównej">
+                  <img
+                    src="client-logo-white.svg"
+                    alt="Logo firmy giarddesign"
+                    width="115"
+                    height="20"
+                  />
+                </a>
+              </li>
+              <li>
+                <div
+                  class="flex flex-col items-center gap-6 pt-6 text-center lg:flex-row lg:pt-0 lg:text-start"
+                >
+                  <p class="font-inter"
+                    >Daj znać, co możemy dla Ciebie zrobić!</p
+                  >
+                  <a
+                    title="Odnośnik do kontaktu"
+                    href="#contact"
+                    class="rounded-[35px] bg-green px-6 py-3 transition duration-300 lg:hover:bg-darkerGreen"
+                    >Skontakuj się z nami</a
+                  >
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="w-full py-[60px]">
             <hr class="text-white" />
@@ -702,50 +733,67 @@
           <div
             class="flex flex-col items-center justify-between font-inter text-sm text-white lg:flex-row"
           >
-            <div
-              class="flex flex-col gap-8 text-center lg:flex-row lg:gap-12 lg:text-start"
-            >
-              <a
-                title="Odnośnik do kontaktu"
-                href="#contact"
-                class="transition duration-300 lg:hover:text-green"
-                >Kontakt</a
+            <p class="sr-only">Menu powtórzone</p>
+            <ul>
+              <p class="sr-only">Kontakt, SocialMeia</p>
+              <ul
+                class="flex flex-col gap-8 text-center lg:flex-row lg:gap-12 lg:text-start"
               >
-              <a
-                href="#"
-                class="transition duration-300 lg:hover:text-green"
-                title="Odnośnik do instagrama"
-                >Instagram</a
+                <li>
+                  <a
+                    title="Odnośnik do kontaktu"
+                    href="#contact"
+                    class="transition duration-300 lg:hover:text-green"
+                    >Kontakt</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition duration-300 lg:hover:text-green"
+                    title="Odnośnik do instagrama"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition duration-300 lg:hover:text-green"
+                    title="Odnośnik do facebooka"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="transition duration-300 lg:hover:text-green"
+                    title="Odnośnik do linkedin"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+              <p class="sr-only">Menu kontaktowe - telefon, email</p>
+              <ul
+                class="flex flex-col gap-4 pt-8 text-center font-inter text-white lg:flex-row lg:gap-12 lg:pt-0 lg:text-start"
               >
-              <a
-                href="#"
-                class="transition duration-300 lg:hover:text-green"
-                title="Odnośnik do facebooka"
-                >Facebook</a
-              >
-              <a
-                href="#"
-                class="transition duration-300 lg:hover:text-green"
-                title="Odnośnik do linkedin"
-                >LinkedIn</a
-              >
-            </div>
-            <div
-              class="flex flex-col gap-4 pt-8 text-center font-inter text-white lg:flex-row lg:gap-12 lg:pt-0 lg:text-start"
-            >
-              <a
-                title="Zadzwoń"
-                href="tel:+000-000-000"
-                class="transition duration-300 lg:hover:text-green"
-                >000-000-000</a
-              >
-              <a
-                title="Wyślij maila"
-                href="mailto:giarddesign@kontakt.pl"
-                class="transition duration-300 lg:hover:text-green"
-                >giarddesign@kontakt.pl</a
-              >
-            </div>
+                <li>
+                  <a
+                    title="Zadzwoń"
+                    href="tel:+000-000-000"
+                    class="transition duration-300 lg:hover:text-green"
+                    >000-000-000</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Wyślij maila"
+                    href="mailto:giarddesign@kontakt.pl"
+                    class="transition duration-300 lg:hover:text-green"
+                    >giarddesign@kontakt.pl</a
+                  >
+                </li>
+              </ul>
+            </ul>
           </div>
           <div
             class="flex flex-col items-center justify-between gap-8 pb-[80px] pt-8 text-center font-inter text-white lg:flex-row lg:gap-0 lg:pt-[120px] lg:text-start"
