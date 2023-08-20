@@ -48,7 +48,7 @@
 }
 
 .macy-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
   transition: all;
   transition-duration: 300ms;
 }
